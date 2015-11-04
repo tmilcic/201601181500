@@ -10,39 +10,29 @@ public class Sredstvo implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   @javax.persistence.GeneratedValue(generator = "SREDSTVO_ID_GENERATOR", strategy = javax.persistence.GenerationType.AUTO)
-   @javax.persistence.Id
-   @javax.persistence.SequenceGenerator(name = "SREDSTVO_ID_GENERATOR", sequenceName = "SREDSTVO_ID_SEQ")
-   private java.lang.Long id;
-
-   @org.kie.api.definition.type.Label(value = "Vrsta sredstva")
+   @org.kie.api.definition.type.Label("Vrsta sredstva")
    private java.lang.String vrsta;
 
-   @org.kie.api.definition.type.Label(value = "Naziv sredstva")
+   @org.kie.api.definition.type.Label("Naziv sredstva")
    private java.lang.String naziv;
 
-   @org.kie.api.definition.type.Label(value = "Serijski broj")
+   @org.kie.api.definition.type.Label("Serijski broj")
    private java.lang.String serijskiBroj;
 
-   @org.kie.api.definition.type.Label(value = "Bar kod")
+   @org.kie.api.definition.type.Label("Bar kod")
    private java.lang.String barCode;
 
    private java.lang.Long djelatnikID;
 
    private java.lang.Long lokacijaID;
 
+   @javax.persistence.GeneratedValue(generator = "SREDSTVO_ID_GENERATOR", strategy = javax.persistence.GenerationType.AUTO)
+   @javax.persistence.Id
+   @javax.persistence.SequenceGenerator(name = "SREDSTVO_ID_GENERATOR", sequenceName = "SREDSTVO_ID_SEQ")
+   private java.lang.Long IDsredstvo;
+
    public Sredstvo()
    {
-   }
-
-   public java.lang.Long getId()
-   {
-      return this.id;
-   }
-
-   public void setId(java.lang.Long id)
-   {
-      this.id = id;
    }
 
    public java.lang.String getVrsta()
@@ -105,18 +95,28 @@ public class Sredstvo implements java.io.Serializable
       this.lokacijaID = lokacijaID;
    }
 
-   public Sredstvo(java.lang.Long id, java.lang.String vrsta,
-         java.lang.String naziv, java.lang.String serijskiBroj,
-         java.lang.String barCode, java.lang.Long djelatnikID,
-         java.lang.Long lokacijaID)
+   public java.lang.Long getIDsredstvo()
    {
-      this.id = id;
+      return this.IDsredstvo;
+   }
+
+   public void setIDsredstvo(java.lang.Long IDsredstvo)
+   {
+      this.IDsredstvo = IDsredstvo;
+   }
+
+   public Sredstvo(java.lang.String vrsta, java.lang.String naziv,
+         java.lang.String serijskiBroj, java.lang.String barCode,
+         java.lang.Long djelatnikID, java.lang.Long lokacijaID,
+         java.lang.Long IDsredstvo)
+   {
       this.vrsta = vrsta;
       this.naziv = naziv;
       this.serijskiBroj = serijskiBroj;
       this.barCode = barCode;
       this.djelatnikID = djelatnikID;
       this.lokacijaID = lokacijaID;
+      this.IDsredstvo = IDsredstvo;
    }
 
 }
