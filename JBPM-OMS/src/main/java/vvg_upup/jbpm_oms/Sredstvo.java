@@ -5,28 +5,118 @@ package vvg_upup.jbpm_oms;
  */
 
 @javax.persistence.Entity
-public class Sredstvo implements java.io.Serializable {
+public class Sredstvo implements java.io.Serializable
+{
 
-    static final long serialVersionUID = 1L;
+   static final long serialVersionUID = 1L;
 
-    @javax.persistence.GeneratedValue(generator = "SREDSTVO_ID_GENERATOR", strategy = javax.persistence.GenerationType.AUTO)
-    @javax.persistence.Id
-    @javax.persistence.SequenceGenerator(name = "SREDSTVO_ID_GENERATOR", sequenceName = "SREDSTVO_ID_SEQ")
-    private java.lang.Long id;
+   @javax.persistence.GeneratedValue(generator = "SREDSTVO_ID_GENERATOR", strategy = javax.persistence.GenerationType.AUTO)
+   @javax.persistence.Id
+   @javax.persistence.SequenceGenerator(name = "SREDSTVO_ID_GENERATOR", sequenceName = "SREDSTVO_ID_SEQ")
+   private java.lang.Long id;
 
-    public Sredstvo() {
-    }
-    
-    public Sredstvo(java.lang.Long id) {
-        this.id = id;
-    }
+   @org.kie.api.definition.type.Label(value = "Vrsta sredstva")
+   private java.lang.String vrsta;
 
-    public java.lang.Long getId() {
-        return this.id;
-    }
-    
-    public void setId(java.lang.Long id) {
-        this.id = id;
-    }
+   @org.kie.api.definition.type.Label(value = "Naziv sredstva")
+   private java.lang.String naziv;
+
+   @org.kie.api.definition.type.Label(value = "Serijski broj")
+   private java.lang.String serijskiBroj;
+
+   @org.kie.api.definition.type.Label(value = "Bar kod")
+   private java.lang.String barCode;
+
+   private java.lang.Long djelatnikID;
+
+   private java.lang.Long lokacijaID;
+
+   public Sredstvo()
+   {
+   }
+
+   public java.lang.Long getId()
+   {
+      return this.id;
+   }
+
+   public void setId(java.lang.Long id)
+   {
+      this.id = id;
+   }
+
+   public java.lang.String getVrsta()
+   {
+      return this.vrsta;
+   }
+
+   public void setVrsta(java.lang.String vrsta)
+   {
+      this.vrsta = vrsta;
+   }
+
+   public java.lang.String getNaziv()
+   {
+      return this.naziv;
+   }
+
+   public void setNaziv(java.lang.String naziv)
+   {
+      this.naziv = naziv;
+   }
+
+   public java.lang.String getSerijskiBroj()
+   {
+      return this.serijskiBroj;
+   }
+
+   public void setSerijskiBroj(java.lang.String serijskiBroj)
+   {
+      this.serijskiBroj = serijskiBroj;
+   }
+
+   public java.lang.String getBarCode()
+   {
+      return this.barCode;
+   }
+
+   public void setBarCode(java.lang.String barCode)
+   {
+      this.barCode = barCode;
+   }
+
+   public java.lang.Long getDjelatnikID()
+   {
+      return this.djelatnikID;
+   }
+
+   public void setDjelatnikID(java.lang.Long djelatnikID)
+   {
+      this.djelatnikID = djelatnikID;
+   }
+
+   public java.lang.Long getLokacijaID()
+   {
+      return this.lokacijaID;
+   }
+
+   public void setLokacijaID(java.lang.Long lokacijaID)
+   {
+      this.lokacijaID = lokacijaID;
+   }
+
+   public Sredstvo(java.lang.Long id, java.lang.String vrsta,
+         java.lang.String naziv, java.lang.String serijskiBroj,
+         java.lang.String barCode, java.lang.Long djelatnikID,
+         java.lang.Long lokacijaID)
+   {
+      this.id = id;
+      this.vrsta = vrsta;
+      this.naziv = naziv;
+      this.serijskiBroj = serijskiBroj;
+      this.barCode = barCode;
+      this.djelatnikID = djelatnikID;
+      this.lokacijaID = lokacijaID;
+   }
 
 }
