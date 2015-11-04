@@ -14,10 +14,8 @@ public class Login implements java.io.Serializable
    @org.kie.api.definition.type.Label("Zaporka")
    private java.lang.String zaporka;
 
-   @org.kie.api.definition.type.Label(value = "Prijava")
    private java.lang.Long prijavaID;
 
-   @org.kie.api.definition.type.Label(value = "Kontrola")
    private java.lang.Boolean kontrola;
 
    public Login()
