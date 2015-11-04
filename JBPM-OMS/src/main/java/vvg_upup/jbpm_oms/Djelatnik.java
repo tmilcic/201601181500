@@ -5,28 +5,76 @@ package vvg_upup.jbpm_oms;
  */
 
 @javax.persistence.Entity
-public class Djelatnik implements java.io.Serializable {
+public class Djelatnik implements java.io.Serializable
+{
 
-    static final long serialVersionUID = 1L;
+   static final long serialVersionUID = 1L;
 
-    @javax.persistence.GeneratedValue(generator = "DJELATNIK_ID_GENERATOR", strategy = javax.persistence.GenerationType.AUTO)
-    @javax.persistence.Id
-    @javax.persistence.SequenceGenerator(name = "DJELATNIK_ID_GENERATOR", sequenceName = "DJELATNIK_ID_SEQ")
-    private java.lang.Long id;
+   @javax.persistence.GeneratedValue(generator = "DJELATNIK_ID_GENERATOR", strategy = javax.persistence.GenerationType.AUTO)
+   @javax.persistence.Id
+   @javax.persistence.SequenceGenerator(name = "DJELATNIK_ID_GENERATOR", sequenceName = "DJELATNIK_ID_SEQ")
+   private java.lang.Long IDdjelatnik;
 
-    public Djelatnik() {
-    }
-    
-    public Djelatnik(java.lang.Long id) {
-        this.id = id;
-    }
+   @org.kie.api.definition.type.Label(value = "Prezime")
+   private java.lang.String prezime;
 
-    public java.lang.Long getId() {
-        return this.id;
-    }
-    
-    public void setId(java.lang.Long id) {
-        this.id = id;
-    }
+   @org.kie.api.definition.type.Label(value = "Ime")
+   private java.lang.String ime;
+
+   @org.kie.api.definition.type.Label(value = "OIB")
+   private java.lang.String OIB;
+
+   public Djelatnik()
+   {
+   }
+
+   public java.lang.Long getIDdjelatnik()
+   {
+      return this.IDdjelatnik;
+   }
+
+   public void setIDdjelatnik(java.lang.Long IDdjelatnik)
+   {
+      this.IDdjelatnik = IDdjelatnik;
+   }
+
+   public java.lang.String getPrezime()
+   {
+      return this.prezime;
+   }
+
+   public void setPrezime(java.lang.String prezime)
+   {
+      this.prezime = prezime;
+   }
+
+   public java.lang.String getIme()
+   {
+      return this.ime;
+   }
+
+   public void setIme(java.lang.String ime)
+   {
+      this.ime = ime;
+   }
+
+   public java.lang.String getOIB()
+   {
+      return this.OIB;
+   }
+
+   public void setOIB(java.lang.String OIB)
+   {
+      this.OIB = OIB;
+   }
+
+   public Djelatnik(java.lang.Long IDdjelatnik, java.lang.String prezime,
+         java.lang.String ime, java.lang.String OIB)
+   {
+      this.IDdjelatnik = IDdjelatnik;
+      this.prezime = prezime;
+      this.ime = ime;
+      this.OIB = OIB;
+   }
 
 }
