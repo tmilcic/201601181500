@@ -14,8 +14,6 @@ public class Login implements java.io.Serializable
    @org.kie.api.definition.type.Label("Zaporka")
    private java.lang.String zaporka;
 
-   private java.lang.Boolean kontrola;
-
    private java.lang.Long IDprijava;
 
    public Login()
@@ -42,16 +40,6 @@ public class Login implements java.io.Serializable
       this.zaporka = zaporka;
    }
 
-   public java.lang.Boolean getKontrola()
-   {
-      return this.kontrola;
-   }
-
-   public void setKontrola(java.lang.Boolean kontrola)
-   {
-      this.kontrola = kontrola;
-   }
-
    public java.lang.Long getIDprijava()
    {
       return this.IDprijava;
@@ -63,11 +51,10 @@ public class Login implements java.io.Serializable
    }
 
    public Login(java.lang.String korisnickoIme, java.lang.String zaporka,
-         java.lang.Boolean kontrola, java.lang.Long IDprijava)
+         java.lang.Long IDprijava)
    {
       this.korisnickoIme = korisnickoIme;
       this.zaporka = zaporka;
-      this.kontrola = kontrola;
       this.IDprijava = IDprijava;
    }
 
