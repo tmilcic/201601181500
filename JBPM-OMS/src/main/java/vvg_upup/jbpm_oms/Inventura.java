@@ -10,14 +10,17 @@ public class Inventura implements java.io.Serializable
    static final long serialVersionUID = 1L;
 
    private java.lang.Long IDinventura;
-   @org.kie.api.definition.type.Label(value = "ID sredstva")
-   private java.lang.Long sredstvoID;
-   @org.kie.api.definition.type.Label(value = "ID djelatnika")
-   private java.lang.Long djelatnikID;
-   @org.kie.api.definition.type.Label(value = "ID lokacije")
-   private java.lang.Long lokacijaID;
-   @org.kie.api.definition.type.Label(value = "Datum")
+   @org.kie.api.definition.type.Label("Datum")
    private java.util.Date datum;
+
+   @org.kie.api.definition.type.Label(value = "Bar Code sredstva")
+   private java.lang.String barCodeSredstva;
+
+   @org.kie.api.definition.type.Label(value = "OIB djelatnika")
+   private java.lang.String OIBdjelatnika;
+
+   @org.kie.api.definition.type.Label(value = "Bar Cod lokacije")
+   private java.lang.String barCodeLokacija;
 
    public Inventura()
    {
@@ -33,36 +36,6 @@ public class Inventura implements java.io.Serializable
       this.IDinventura = IDinventura;
    }
 
-   public java.lang.Long getSredstvoID()
-   {
-      return this.sredstvoID;
-   }
-
-   public void setSredstvoID(java.lang.Long sredstvoID)
-   {
-      this.sredstvoID = sredstvoID;
-   }
-
-   public java.lang.Long getDjelatnikID()
-   {
-      return this.djelatnikID;
-   }
-
-   public void setDjelatnikID(java.lang.Long djelatnikID)
-   {
-      this.djelatnikID = djelatnikID;
-   }
-
-   public java.lang.Long getLokacijaID()
-   {
-      return this.lokacijaID;
-   }
-
-   public void setLokacijaID(java.lang.Long lokacijaID)
-   {
-      this.lokacijaID = lokacijaID;
-   }
-
    public java.util.Date getDatum()
    {
       return this.datum;
@@ -73,15 +46,45 @@ public class Inventura implements java.io.Serializable
       this.datum = datum;
    }
 
-   public Inventura(java.lang.Long IDinventura, java.lang.Long sredstvoID,
-         java.lang.Long djelatnikID, java.lang.Long lokacijaID,
-         java.util.Date datum)
+   public java.lang.String getBarCodeSredstva()
+   {
+      return this.barCodeSredstva;
+   }
+
+   public void setBarCodeSredstva(java.lang.String barCodeSredstva)
+   {
+      this.barCodeSredstva = barCodeSredstva;
+   }
+
+   public java.lang.String getOIBdjelatnika()
+   {
+      return this.OIBdjelatnika;
+   }
+
+   public void setOIBdjelatnika(java.lang.String OIBdjelatnika)
+   {
+      this.OIBdjelatnika = OIBdjelatnika;
+   }
+
+   public java.lang.String getBarCodeLokacija()
+   {
+      return this.barCodeLokacija;
+   }
+
+   public void setBarCodeLokacija(java.lang.String barCodeLokacija)
+   {
+      this.barCodeLokacija = barCodeLokacija;
+   }
+
+   public Inventura(java.lang.Long IDinventura, java.util.Date datum,
+         java.lang.String barCodeSredstva, java.lang.String OIBdjelatnika,
+         java.lang.String barCodeLokacija)
    {
       this.IDinventura = IDinventura;
-      this.sredstvoID = sredstvoID;
-      this.djelatnikID = djelatnikID;
-      this.lokacijaID = lokacijaID;
       this.datum = datum;
+      this.barCodeSredstva = barCodeSredstva;
+      this.OIBdjelatnika = OIBdjelatnika;
+      this.barCodeLokacija = barCodeLokacija;
    }
 
 }
