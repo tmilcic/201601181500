@@ -10,14 +10,17 @@ public class Razduzenje implements java.io.Serializable
    static final long serialVersionUID = 1L;
 
    private java.lang.Long IDrazduzenje;
-   @org.kie.api.definition.type.Label(value = "Id sredstva")
-   private java.lang.Long sredstvoID;
-   @org.kie.api.definition.type.Label(value = "ID djelatnika")
-   private java.lang.Long djelatnikID;
-   @org.kie.api.definition.type.Label(value = "ID lokacije")
-   private java.lang.Long lokacijaID;
-   @org.kie.api.definition.type.Label(value = "Datum")
+   @org.kie.api.definition.type.Label("Datum")
    private java.util.Date datum;
+
+   @org.kie.api.definition.type.Label(value = "Bar Code sredstva")
+   private java.lang.String barCode;
+
+   @org.kie.api.definition.type.Label(value = "OIB djelatnika")
+   private java.lang.String OIBdjelatnika;
+
+   @org.kie.api.definition.type.Label(value = "Bar Code lokacije")
+   private java.lang.String barCodLokacija;
 
    public Razduzenje()
    {
@@ -33,36 +36,6 @@ public class Razduzenje implements java.io.Serializable
       this.IDrazduzenje = IDrazduzenje;
    }
 
-   public java.lang.Long getSredstvoID()
-   {
-      return this.sredstvoID;
-   }
-
-   public void setSredstvoID(java.lang.Long sredstvoID)
-   {
-      this.sredstvoID = sredstvoID;
-   }
-
-   public java.lang.Long getDjelatnikID()
-   {
-      return this.djelatnikID;
-   }
-
-   public void setDjelatnikID(java.lang.Long djelatnikID)
-   {
-      this.djelatnikID = djelatnikID;
-   }
-
-   public java.lang.Long getLokacijaID()
-   {
-      return this.lokacijaID;
-   }
-
-   public void setLokacijaID(java.lang.Long lokacijaID)
-   {
-      this.lokacijaID = lokacijaID;
-   }
-
    public java.util.Date getDatum()
    {
       return this.datum;
@@ -73,15 +46,45 @@ public class Razduzenje implements java.io.Serializable
       this.datum = datum;
    }
 
-   public Razduzenje(java.lang.Long IDrazduzenje, java.lang.Long sredstvoID,
-         java.lang.Long djelatnikID, java.lang.Long lokacijaID,
-         java.util.Date datum)
+   public java.lang.String getBarCode()
+   {
+      return this.barCode;
+   }
+
+   public void setBarCode(java.lang.String barCode)
+   {
+      this.barCode = barCode;
+   }
+
+   public java.lang.String getOIBdjelatnika()
+   {
+      return this.OIBdjelatnika;
+   }
+
+   public void setOIBdjelatnika(java.lang.String OIBdjelatnika)
+   {
+      this.OIBdjelatnika = OIBdjelatnika;
+   }
+
+   public java.lang.String getBarCodLokacija()
+   {
+      return this.barCodLokacija;
+   }
+
+   public void setBarCodLokacija(java.lang.String barCodLokacija)
+   {
+      this.barCodLokacija = barCodLokacija;
+   }
+
+   public Razduzenje(java.lang.Long IDrazduzenje, java.util.Date datum,
+         java.lang.String barCode, java.lang.String OIBdjelatnika,
+         java.lang.String barCodLokacija)
    {
       this.IDrazduzenje = IDrazduzenje;
-      this.sredstvoID = sredstvoID;
-      this.djelatnikID = djelatnikID;
-      this.lokacijaID = lokacijaID;
       this.datum = datum;
+      this.barCode = barCode;
+      this.OIBdjelatnika = OIBdjelatnika;
+      this.barCodLokacija = barCodLokacija;
    }
 
 }
