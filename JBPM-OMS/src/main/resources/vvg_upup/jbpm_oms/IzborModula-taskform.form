@@ -3,19 +3,6 @@
 <property name="name" value="IzborModula-taskform.form"/>
 <property name="displayMode" value="default"/>
 <property name="status" value="0"/>
-<field position="0" name="FMout_Login_korisnickoIme" type="InputText" id="1500451797">
-<property name="fieldRequired" value="false"/>
-<property name="groupWithPrevious" value="false"/>
-<property name="label" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;Prijavljeni ste kao:quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
-<property name="errorMessage" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
-<property name="title" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
-<property name="readonly" value="true"/>
-<property name="isHTML" value="false"/>
-<property name="hideContent" value="false"/>
-<property name="inputBinding" value="in_out_Login/korisnickoIme"/>
-<property name="outputBinding" value="out_out_Login/korisnickoIme"/>
-<property name="fieldClass" value="java.lang.String"/>
-</field>
 <field position="1" name=":decorator_1" type="Separator" id="1202572564">
 <property name="fieldRequired" value="false"/>
 <property name="groupWithPrevious" value="false"/>
@@ -40,6 +27,19 @@
 <property name="outputBinding" value="out_izborModula"/>
 <property name="fieldClass" value="java.lang.Integer"/>
 </field>
-<dataHolder inputId="in_out_Login" name="#0000A0" type="dataModelerEntry" outId="out_out_Login" value="vvg_upup.jbpm_oms.Login" id="FMout_Login"/>
+<field position="0" name="Prijavljeni ste kao:" type="InputText" id="2008662788">
+<property name="fieldRequired" value="false"/>
+<property name="groupWithPrevious" value="false"/>
+<property name="label" value="quot;SSClassquot;,quot;quot;quot;SSStylequot;,quot;quot;quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;korisnickoIme (FMLogin)quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="errorMessage" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="title" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="readonly" value="true"/>
+<property name="isHTML" value="false"/>
+<property name="hideContent" value="false"/>
+<property name="inputBinding" value="out_Login/korisnickoIme"/>
+<property name="outputBinding" value="out_Login/korisnickoIme"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<dataHolder inputId="out_Login" name="#0000A0" type="dataModelerEntry" outId="out_Login" value="vvg_upup.jbpm_oms.Login" id="FMLogin"/>
 <dataHolder inputId="in_izborModula" name="#0000A0" type="basicType" outId="out_izborModula" value="java.lang.Integer" id="MFizborModula"/>
 </form>
