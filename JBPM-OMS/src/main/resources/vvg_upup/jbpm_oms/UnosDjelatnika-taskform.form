@@ -3,6 +3,19 @@
 <property name="name" value="UnosDjelatnika-taskform.form"/>
 <property name="displayMode" value="default"/>
 <property name="status" value="0"/>
+<field position="0" name="FMLogin_korisnickoIme" type="InputText" id="1106102373">
+<property name="fieldRequired" value="false"/>
+<property name="groupWithPrevious" value="false"/>
+<property name="label" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;Prijavljeni ste kao:quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="errorMessage" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="title" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="readonly" value="true"/>
+<property name="isHTML" value="false"/>
+<property name="hideContent" value="false"/>
+<property name="inputBinding" value="out_Login/korisnickoIme"/>
+<property name="outputBinding" value="out_Login/korisnickoIme"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
 <field position="1" name=":decorator_0" type="HTMLLabel" id="88938265">
 <property name="fieldRequired" value="false"/>
 <property name="readonly" value="false"/>
@@ -55,30 +68,26 @@
 <property name="outputBinding" value="out_Inventura/datum"/>
 <property name="fieldClass" value="java.util.Date"/>
 </field>
-<field position="6" name="FMdjelatrnikUnesi" type="CheckBox" id="1743340848">
+<field position="6" name=":decorator_1" type="Separator" id="1064463542">
 <property name="fieldRequired" value="false"/>
-<property name="label" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;Unesi djelatnikaquot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="readonly" value="false"/>
+<property name="fieldClass" value="Separator"/>
+</field>
+<field position="7" name="FMOdabir_odabir" type="InputText" id="1052704914">
+<property name="fieldRequired" value="true"/>
+<property name="label" value="quot;SSClassquot;,quot;quot;quot;SSStylequot;,quot;quot;quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;UNESI / ODUSTANIquot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
 <property name="errorMessage" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
 <property name="title" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
 <property name="readonly" value="false"/>
-<property name="inputBinding" value="in_djelatnikUnesi"/>
-<property name="outputBinding" value="out_djelatnikUnesi"/>
-<property name="fieldClass" value="java.lang.Boolean"/>
-</field>
-<field position="0" name="FMLogin_korisnickoIme" type="InputText" id="1106102373">
-<property name="fieldRequired" value="false"/>
-<property name="groupWithPrevious" value="false"/>
-<property name="label" value="quot;SSClassquot;,quot;quot;quot;SSStylequot;,quot;quot;quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;Prijavljeni ste kao:quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
-<property name="errorMessage" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
-<property name="title" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
-<property name="readonly" value="true"/>
+<property name="rangeFormula" value="{Unesi,Unesi;Odustani,Odustani}"/>
 <property name="isHTML" value="false"/>
 <property name="hideContent" value="false"/>
-<property name="inputBinding" value="out_Login/korisnickoIme"/>
-<property name="outputBinding" value="out_Login/korisnickoIme"/>
+<property name="inputBinding" value="in_Odabir/odabir"/>
+<property name="outputBinding" value="out_Odabir/odabir"/>
 <property name="fieldClass" value="java.lang.String"/>
 </field>
 <dataHolder inputId="out_Login" name="#E9E371" type="dataModelerEntry" outId="out_Login" value="vvg_upup.jbpm_oms.Login" id="FMLogin"/>
+<dataHolder inputId="in_Odabir" name="#A7E690" type="dataModelerEntry" outId="out_Odabir" value="vvg_upup.jbpm_oms.Odabir" id="FMOdabir"/>
 <dataHolder inputId="in_djelatnikUnesi" name="#0000A0" type="basicType" outId="out_djelatnikUnesi" value="java.lang.Boolean" id="FMdjelatrnikUnesi"/>
 <dataHolder inputId="in_Inventura" name="#0000A0" type="dataModelerEntry" outId="out_Inventura" value="vvg_upup.jbpm_oms.Inventura" id="FMinventura"/>
 </form>
